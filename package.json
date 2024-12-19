@@ -1,3 +1,11 @@
 {
-  "private": true
+  "private": true,
+  "scripts": {
+    "dev:packages": "pnpm --parallel --filter=@packages/ui --filter=@packages/core dev",
+    "dev:oms": "pnpm --filter=oms dev",
+    "dev:tms": "pnpm --filter=tms dev",
+    "dev:wms": "pnpm --filter=wms dev",
+    "dev:zones": "pnpm --filter=zones dev",
+    "dev:all": "pnpm dev:packages & pnpm dev:oms & pnpm dev:tms & pnpm dev:wms & pnpm dev:zones"
+  }
 }
